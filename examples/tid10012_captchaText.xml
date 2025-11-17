@@ -1,0 +1,39 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10012" version="0.0.8" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - text captcha solver" />
+    <attr name="desc" value="Demo - text captcha solver: solve text captchas, including text in image, text question." />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="parasstr"
+      value="https://2captcha.com/demo/normal::img._captchaImage_rrn3u_9::#simple-captcha-field::button[type='submit']::div._alertBody_bl73y_16::attr::failedstr" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="url" desc="url" />
+    <para paraname="para2" name="imageLoc" desc="imageLoc" />
+    <para paraname="para3" name="inputLoc" desc="inputLoc" />
+    <para paraname="para4" name="submitLoc" desc="submitLoc" />
+    <para paraname="para5" name="checkLoc" desc="checkLoc" />
+    <para paraname="para6" name="checkAttr" desc="checkAttr" />
+    <para paraname="para7" name="failedstr" desc="faildStr" />
+  </paras>
+  <actions>
+    <action_goto url="${inParas.para1}" wait="5000" />
+    <action_captcha debug="true">
+      <captcha_text>
+        <image_element>
+          <element loc="${inParas.para2}" />
+        </image_element>
+        <input_element>
+          <element loc="${inParas.para3}" />
+        </input_element>
+        <submit_element>
+          <element loc="${inParas.para4}" />
+        </submit_element>
+        <check_result attr="${inParas.para6}" failedstr="${inParas.para7}">
+          <element loc="${inParas.para5}" />
+        </check_result>
+      </captcha_text>
+    </action_captcha>
+  </actions>
+</template>

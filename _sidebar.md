@@ -7,26 +7,38 @@
  * @Reference: 
 -->
 
-* [Overview](/README)
+* [Overview](/readme)
 
-* [User Guide](/manual/)
-  * [Quick User Guide](/manual/README)
-  * [Export Data](/manual/exportData)
-  * [Synchronize Data](/manual/syncData)
-  <!-- * [Manage Accounts](/manual/manageAccount) -->
-  <!-- * [Manage Friends](/manual/manageFriend) -->
-  <!-- * [Manage Schedules](/manual/manageSchedule) -->
-  <!-- * [Personal Setting](/manual/personalSetting) -->
+* [Scrapers](/scrapers/)
+  * [Google Map](/scrapers/googleMap)
+  <!-- * [Facebook](/scrapers/facebook) -->
 
-* [Template Design](/template/)
-  * [Quick Designer Guide](/template/README)
-  * [Use subtasks](/template/useSubtask)
-  * [Set domainId](/template/setDomainId)
-  * [Data table](/template/datatable)
-  * [Add/Save/Commit Template](/template/saveTemplate)
-  * [Template Config](/template/templConfig)
-  * [Template Lang](/template/templLang)
-  * [CSS Selectors](/template/cssSelector)
-  * [Extension Commands](/template/extCommand)
-  <!-- * [Reference for Template Config](/template/refTemplConfig) -->
-  <!-- * [Reference for Template Lang](/template/refTemplLang) -->
+* [Design - Start](/start/)
+  * [Quick Designer Guide](/start/readme)
+  * [Add/Save/Commit Template](/start/savecommit)
+  * [Set domainId](/start/domain)
+  * [Use regular data table](/start/datatable)
+  * [CSS Selectors](/start/cssselector)
+
+* [Design - Topics](/topics/)
+  * [How to use subtasks](/topics/subtask)
+  * [When login is required](/topics/login)
+  * [How to use API](/topics/api)
+  * [How to solve captcha](/topics/captcha)
+  * [Popup page](/topics/popup)
+  * [How to support multilanguages](/topics/mutilangs)
+  * [Security](/topics/security)
+  <!-- * [Contexts](/topics/contexts) -->
+  * [Directory structure suggestions](/topics/direcory)
+
+* [Design - Examples](/examples/)
+  * [ap](/examples/)
+
+* [Design - Reference](/reference/)
+  * [Actions](/reference/actions)
+  * [Get in action_setvar_get](/reference/gets)
+  * [Fun in transform](/reference/funs)
+  * [Attributes of Template](/reference/attributes)
+  * [Extension Commands](/reference/extCommands)
+
+* [Web Scraping](/scraping/)

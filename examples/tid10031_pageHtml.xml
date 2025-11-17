@@ -1,0 +1,24 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10031" version="0.0.4" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - get the HTML of a popup page"></attr>
+    <attr name="desc" value="Demo - get the HTML of a popup page; this template can only be executed on the current/popup page!!!"></attr>
+    <attr name="domainId" value="1"></attr>
+    <attr name="cfgShareLevel" value="120" />
+  </attrs>
+  <paras>
+  </paras>
+  <actions>
+    <action_setvar_get varname="html">
+      <get_content />
+    </action_setvar_get>
+    <action_extract tabname="dat_0000000000009911">
+      <column_templstr colname="pageUrl">
+        <templstr templ="${sysParas.url}" />
+      </column_templstr>
+      <column_templstr colname="html">
+        <templstr templ="${html}" />
+      </column_templstr>
+    </action_extract>
+  </actions>
+</template>

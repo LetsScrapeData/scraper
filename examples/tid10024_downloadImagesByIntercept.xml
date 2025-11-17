@@ -1,0 +1,23 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10024" version="0.0.8" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - download image by interception" />
+    <attr name="desc" value="Demo - download image by interception" />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="parasstr" value="https://www.ebay.com/sch/i.html?_nkw=iphone%2015%20case::^https://i.ebayimg.com/.*00.webp$" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="pageUrl" desc="pageUrl, url of web page to be opened" />
+    <para paraname="para2" name="imageUrl" desc="imageUrl, RegExp that the image's url matches" />
+  </paras>
+  <actions>
+    <!-- Solution 1 - intercept responses of image requests and save them (simplest) -->
+    <action_intercept_set>
+      <!-- this tables includes original url and filename of images -->
+      <response_save tabname="dat_0000000000008002" resourcetype="image" url="${inParas.para2}" />
+    </action_intercept_set>
+    <action_goto url="${inParas.para1}" wait="10000" />
+    <action_scroll_by maxtimes="0" interval="3000" />
+  </actions>
+</template>

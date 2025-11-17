@@ -1,0 +1,20 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10007" version="0.0.8" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - extract data from a horizontal table" />
+    <attr name="desc" value="Demo - extract data from a horizontal table" />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="parasstr" value="https://countrycode.org/::div.d-none table.main-table" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="url" desc="url" />
+    <para paraname="para2" name="tableLoc" desc="tableLoc" />
+  </paras>
+  <actions>
+    <action_goto url="${inParas.para1}" />
+    <action_extract_table tabname="dat_0000000000009941">
+      <element loc="${inParas.para2}" />
+    </action_extract_table>
+  </actions>
+</template>

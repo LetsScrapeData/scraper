@@ -1,0 +1,22 @@
+<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10054" version="0.0.42" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - how to get data through state data after login (API)" />
+    <attr name="desc"
+      value="Demo - how to get data through state data after login (API). Just set the capName attribute. APP will first execute the task of the automatic login template of capName to obtain state data, and then execute the tasks of this template." />
+    <attr name="domainId" value="10000" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="capName" value="localhost" />
+    <!-- No web page is required to execute this template -->
+    <attr name="capNum" value="-1" />
+    <!-- Specify the capability used to debug the template. Its status must be disabled to avoid being used for other tasks. -->
+    <attr name="capId" value="200000006" />
+  </attrs>
+  <paras />
+  <actions>
+    <action_api url="http://127.0.0.1:8090/api/cap/capabilities" headerssource="origStateHeaders" cache="true">
+      <response_statuscode codes="401" errname="capexpired" />
+    </action_api>
+    <action_extract_array tabname="dat_0000000000009921" list="" subkeys="data.records" keys="capabilityId,capName,nickName,statusCat" />
+  </actions>
+</template>

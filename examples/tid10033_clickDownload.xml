@@ -1,0 +1,25 @@
+<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="0" version="0.0.0" commited="false">
+  <attrs>
+    <attr name="name" value="defaultName"></attr>
+    <attr name="desc" value="defaultDescription"></attr>
+    <attr name="domainId" value="1"></attr>
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="browserControllerTypes" value="puppeteer" />
+  </attrs>
+  <paras>
+  </paras>
+  <actions>
+    <!-- "Browser.setDownloadBehavior" does not work in incognito mode??? and "Page.setDownloadBehavior" is depreciated -->
+    <action_goto url="https://credit.jdzx.net.cn/xdcp/loginPage/query?queryParams=info&amp;getInput=%E7%A1%BC%E9%85%B8%E5%86%B0%E7%89%87#"></action_goto>
+    <action_click wait="5000" clicktype="evaluate">
+      <element loc="#modelContent > div:nth-child(2) div.model-infopc a"></element>
+    </action_click>
+    <action_click downloadpath="xdcp" clicktype="evaluate">
+      <element loc="#instruction_span"></element>
+    </action_click>
+    <!-- <action_setvar_get varname="content">
+      <get_file url="https://credit.jdzx.net.cn/xdcp/infoService/downloadFile.do?filepath=df4a280d-421f-4f55-a1bb-4c6eb3954a48.pdf" path="aaa.pdf" />
+    </action_setvar_get> -->
+  </actions>
+</template>

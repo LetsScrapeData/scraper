@@ -1,0 +1,44 @@
+<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="0" version="0.0.0" commited="false">
+  <attrs>
+    <attr name="name" value="defaultName"></attr>
+    <attr name="desc" value="defaultDescription"></attr>
+    <attr name="domainId" value="101"></attr>
+    <attr name="domainNum" value="0" />
+  </attrs>
+  <paras>
+  </paras>
+  <actions>
+    <action_setvar_object varname="data" data='{"nn": 99, "nu": null}'>
+      <object_key key="bbb" value="200" datatype="number" operate="set" varname="bbb"></object_key>
+      <object_key key="aa" value="100" datatype="string">
+        <transform usevar="true">
+          <fun_concat str1=" " str2="XXX" str3="${bbb}" />
+        </transform>
+      </object_key>
+      <object_key key="ccc" value="__this__" datatype="object"></object_key>
+      <object_key key="nn" value="" operate="delete"></object_key>
+    </action_setvar_object>
+    <action_api url="https://api.LetsScrapeData.com" data="[]" datatype="object" method="PUT">
+      <object_key key="" value="aaaa" operate="push"></object_key>
+      <object_key key="" value="222" datatype="number" operate="push"></object_key>
+      <object_key key="" value="" datatype="null" operate="unshift"></object_key>
+    </action_api>
+    <action_setvar_templstr varname="salt">
+      <templstr templ="[]" />
+    </action_setvar_templstr>
+    <action_setvar_templstr varname="url">
+      <templstr templ="abcdefghijklmnopqrstuvwxyz" />
+    </action_setvar_templstr>
+    <action_loopinstr list="4,7,18,2,5,8,23,2,15,5,10,31,8,3,5,5,7,3,5,9,3,9,4,19" split="," varname="dbgdbgidx">
+      <action_setvar_object varname="salt" data="${salt}">
+        <object_key key="" value="${url}" varname="dbgdbgchar" operate="discard">
+          <transform usevar="true">
+            <fun_slice beginidx="${dbgdbgidx}" len="1" />
+          </transform>
+        </object_key>
+        <object_key key="" value="${dbgdbgchar}" operate="push"></object_key>
+      </action_setvar_object>
+    </action_loopinstr>
+  </actions>
+</template>

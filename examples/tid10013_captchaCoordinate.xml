@@ -1,0 +1,39 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10013" version="0.0.6" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - coordinate captcha solver" />
+    <attr name="desc" value="Demo - coordinate captcha solver: solve coordinate captchas, including text in image, text question." />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="url" desc="url" />
+    <para paraname="para2" name="clickLoc1" desc="clickLoc1" />
+    <para paraname="para3" name="clickLoc2" desc="clickLoc2" />
+    <para paraname="para4" name="imageLoc1" desc="imageLoc1" />
+    <para paraname="para5" name="imageLoc2" desc="imageLoc2" />
+  </paras>
+  <actions>
+    <action_goto url="${inParas.para1}" wait="5000" />
+    <action_click wait="1000">
+      <element loc="${inParas.para2}"></element>
+    </action_click>
+    <action_click wait="1000">
+      <element loc="${inParas.para3}"></element>
+    </action_click>
+    <action_captcha>
+      <captcha_coordinate lang="zh">
+        <image_element>
+          <element loc="${inParas.para4}" />
+          <element loc="${inParas.para5}" />
+        </image_element>
+        <!-- <submit_element>
+          <element loc="${inParas.para4}" />
+        </submit_element> -->
+        <check_result attr="" failedstr="">
+          <element loc="${inParas.para4}" />
+        </check_result>
+      </captcha_coordinate>
+    </action_captcha>
+  </actions>
+</template>

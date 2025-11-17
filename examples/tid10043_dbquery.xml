@@ -1,0 +1,17 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10043" version="0.0.4" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - dbquery, query data from a relational database syncdb" />
+    <attr name="desc" value="Demo - dbquery, query data from a relational database syncdb" />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+  </attrs>
+  <paras />
+  <actions>
+    <action_setvar_dbquery varname="records">
+      <dbquery dbname="syncdb" sql="SELECT c01, c02, c03 FROM dat_0000000200000004" />
+    </action_setvar_dbquery>
+    <action_extract_array tabname="dat_0000000000009921" list="" subkeys="">
+    </action_extract_array>
+  </actions>
+</template>

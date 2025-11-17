@@ -8,7 +8,7 @@
 -->
 # Quick Start - Template Design
 
-The instructions in this section are only applicable when you design the template yourself. If you use an existing template to scrape data, refer to [how to scrape data](/manual/README).
+The instructions in this section are only applicable when you design the template yourself. If you use an existing template to scrape data, refer to [how to scrape data](/readme).
 
 We design templates using vscode and related extensions.
 
@@ -32,11 +32,11 @@ We design templates using vscode and related extensions.
 
 ### Basic concepts used by the template
 * <b>attr</b>: attribute of template, such as template\.name
-* <b>para</b>: parameter defines what data is collected or controls web scraping process
+* <b>para</b>: parameter defines what data is scraped or controls web scraping process
 * <b>action</b>: what to do for scraping data
 * <b>domainId</b>: a template must be associated with a domainId identified domain, which is a attribute of template
 * <b>tabname</b>: the name of the data table that stores the scraped data, and a template can have multiple data tables or not; the domainId associated with tabname must be the same as that of the template
-* <b>loc</b>: CSS Selector or [XPath](https://developer.mozilla.org/en-US/docs/Web/XPath), which is used to select the elements from which to extract the desired data; [CSS selector](/template/cssSelector) is recommended because LetsScrapeData extension supports automatic prompts for ID, class, and attribute selector
+* <b>loc</b>: [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors) or [XPath](https://developer.mozilla.org/en-US/docs/Web/XPath), which is used to select the elements from which to extract the desired data; [CSS selector](/start/cssSelector) is recommended because LetsScrapeData extension supports automatic prompts for ID, class, and attribute selector
 
 ### Components of a template
 A template consists of two components:
@@ -50,7 +50,7 @@ A template consists of two components:
 * Input the URL of the web page you want to open: https://www.LetsScrapeData.com/pages/listexample1.html.
 * Open the above url by running command "Execute All Actions(Ctrl + Alt + A)".
 * In the web page, view the element properties that contain the list of exmple items. The div element with id container contains a list of example items.
-* Add action_loopineles by inputing acle and press the Enter key, replace <b style="color: blue">loc</b>. You may use class / ID / attribute [CSS selector](/template/cssSelector) when inputting loc.
+* Add action_loopineles by inputing acle and press the Enter key, replace <b style="color: blue">loc</b>. You may use class / ID / attribute [CSS selector](/start/cssSelector) when inputting loc.
 * If needed, check the above loc is correct:
   * Run command "Extract Some Columns(Ctrl + Alt + F, or shift + F in vim normal mode)" to check the loc: Selected elements will be hightlighted in web page and the outerHtml of the first selected element will be displayed.
 * Add action_extract by inputing acex and press the Enter key.
@@ -62,10 +62,11 @@ A template consists of two components:
 * Test the template:
   * If the url has alread been openned, run command "Execute Part Actions(Ctrl + Alt + P)", which will skip all "operate" actions, such as goto/click/input/hover/select.
   * If the url has not been openned yet, run command "Execute All Actions(Ctrl + Alt + A)".
-* If you want to save the above template: 
-  * [Set domainId](/template/setDomainId)
-  * [Get New Tabname](/template/datatable)
-  * [Add/Save/Commit Template](/template/saveTemplate)
+* [Add/Save/Commit template](/start/saveTemplate)
+  * Run command "Save/Add Template Config(Ctrl + Alt + S)" to add a new template(tid=0), then tid is updated.
+  <!-- * Run command "Save/Add Template Config(Ctrl + Alt + S)" to save the template config. -->
+  * Run command "Save Template Lang(Ctrl + Alt + L)" to generate and save the template lang.
+  * Run command "Commit Template Config & Lang(Ctrl + Alt + C)" to commit the template.
 
 ### Template config example
 The following template has tid 10001, you can add a schedule with this template. [Video on youtube](https://youtu.be/kFlZ0Ogg1PI) shows how to design this template.
@@ -106,17 +107,7 @@ The following template has tid 10001, you can add a schedule with this template.
 </template>
 ```
 
-### Use subtask
-Refer to the video on [how to use subtasks](https://youtu.be/7jTd8VYRJH8).
-
-### When login is required
-Refer to [Capability](/template/capability) for details.
-
-### More topics
-* [Template Config](/template/templConfig)
-* [Template Lang](/template/templLang)
-* [CSS Selectors](/template/cssSelector)
-* [Extension Commands](/template/extCommand)
-<!-- * [Template Examples](/template/tempExamples) -->
-<!-- * [Reference for Template Config](/template/refTemplConfig) -->
-<!-- * [Reference for Template Lang](/template/refTemplLang) -->
+### Next
+* [Set domainId](/start/setDomainId)
+* [Use regular data table](/start/datatable)
+* [CSS Selectors](/start/cssSelector)

@@ -1,0 +1,36 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10032" version="0.0.14" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - execute a new subtask using a popup page" />
+    <attr name="desc" value="Demo - execute a new subtask using a popup page" />
+    <attr name="domainId" value="1" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="parasstr" value="https://www.baidu.com::#hotsearch-content-wrapper > li::a" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="pageUrl" desc="pageUrl" />
+    <para paraname="para2" name="locOfList" desc="locOfList" />
+    <para paraname="para3" name="locOfLink" desc="locOfLink" />
+  </paras>
+  <actions>
+    <action_goto url="${inParas.para1}" />
+    <action_loopineles maxloops="2">
+      <element loc="${inParas.para2}" />
+      <action_setvar_element varname="href">
+        <element loc="${inParas.para3}" />
+        <elecontent_attr attrname="href" />
+      </action_setvar_element>
+      <action_click eurl="https://" popuppage="required" popupsubtask="true">
+        <element loc="${inParas.para3}" />
+      </action_click>
+      <action_subtask>
+        <subtask tid="10031" parasstr="${href}" popuppage="true" />
+      </action_subtask>
+      <action_extract tabname="dat_0000000000009912">
+        <column_templstr colname="url">
+          <templstr templ="${href}" />
+        </column_templstr>
+      </action_extract>
+    </action_loopineles>
+  </actions>
+</template>

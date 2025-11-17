@@ -1,0 +1,42 @@
+<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10053" version="0.0.20" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - how to get data through state data after login (browser)" />
+    <attr name="desc"
+      value="Demo - how to get data through state data after login (browser). Just set the capName attribute. APP will first execute the task of the automatic login template of capName to obtain state data, and then execute the tasks of this template." />
+    <attr name="domainId" value="10000" />
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="minUpdateInterval" value="1" />
+    <attr name="defaultUpdateInterval" value="10" />
+    <attr name="capName" value="localhost" />
+    <!-- Specify the capability used to debug the template. Its status must be disabled to avoid being used for other tasks. -->
+    <attr name="capId" value="200000006" />
+  </attrs>
+  <paras />
+  <actions>
+    <action_goto url="http://127.0.0.1:8090/" wait="2000" />
+    <action_ifelse>
+      <condition_templstr>
+        <templstr templ="${sysParas.url}" />
+        <transform>
+          <fun_includes str="login" />
+        </transform>
+        <action_exit errname="capexpired" />
+      </condition_templstr>
+    </action_ifelse>
+    <action_loopineles>
+      <element loc="tbody > tr" />
+      <action_extract tabname="dat_0000000000009911">
+        <column_element colname="scheduleId">
+          <element loc="td:nth-child(2)" />
+        </column_element>
+        <column_element colname="name">
+          <element loc="td:nth-child(3)" />
+        </column_element>
+        <column_element colname="statusCat">
+          <element loc="td:nth-child(4)" />
+        </column_element>
+      </action_extract>
+    </action_loopineles>
+  </actions>
+</template>

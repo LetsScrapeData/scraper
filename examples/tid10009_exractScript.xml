@@ -1,0 +1,38 @@
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<template tid="10009" version="0.0.6" commited="true">
+  <attrs>
+    <attr name="name" value="Demo - extract data using script"></attr>
+    <attr name="desc" value="Demo - extract data using script, such as extracting data from response of API request"></attr>
+    <attr name="domainId" value="1"></attr>
+    <attr name="cfgShareLevel" value="120" />
+    <attr name="parasstr" value="TITLE::TYPE" />
+  </attrs>
+  <paras>
+    <para paraname="para1" name="title" desc="title" />
+    <para paraname="para2" name="type" desc="type" />
+  </paras>
+  <actions>
+    <action_api url="https://httpbin.org/json"></action_api>
+    <action_extract_array tabname="dat_0000000000009921" list="" subkeys="slideshow.slides" keys="title,type">
+    </action_extract_array>
+    <action_extract_script tabname="dat_0000000000009931">
+      // inData: ExtractScriptInData
+      function extract(inData) {
+        const { vars, execData, tabName } = inData;
+  
+        let records = execData[tabName];
+        if (!records) {
+          records = [];
+          execData[tabName] = records;
+        }
+
+        // Generally, new records are extracted from inData.responses
+        records.push({ title: vars.inParas.para1, type: vars.inParas.para2 });
+
+        return JSON.stringify({ execData });
+      }
+
+      extract(inData);
+    </action_extract_script>
+  </actions>
+</template>

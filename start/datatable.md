@@ -11,7 +11,7 @@
 The scraped data is stored in data tables, each uniquely identified by a **tabname** (such as "dat_0000000000008001") and a corresponding numerical value called **datatableId** (such as 8001). Data tables are divided into two main categories:
 
 * **datatableId < 10000: JSONL data table**, directly referenced by any template (no application required). Data records are treated as JSONL (This category of data table, after synchronization or export, only has one column "jsonl".), and no multi-language configuration is needed. This category is further subdivided into three types:
-  * **8000 <= datatableId < 10000**: Stores data, visible to the user (exportable and syncable).
+  * **8000 <= datatableId < 10000**: Stores data, visible to the user (exportable and synchronizable).
   * **7000 <= datatableId < 8000**: Stores data, not visible to the user; primarily used for scenarios where raw data is obtained first, and then extracted later.
   * **6000 <= datatableId < 7000**: Does not store data, not visible to the user; primarily used to store temporary data, from which the required data is immediately extracted.
 * **datatableId > 10000: regular data table**. It must be applied for first and can only be used to store data corresponding to the domainId. Multilingual configuration must be defined.
