@@ -7,6 +7,8 @@
  * @Reference: 
 -->
 
+# Add / Save / Commite Template
+
 ### Components of a template
 A template consists of two components:
 * Template Config: a XML file that defines attributes, parameters, actions and basic lang information of template.

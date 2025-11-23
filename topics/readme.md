@@ -1,9 +1,9 @@
-- [How to use subtasks](/topics/subtask)
-- [When login is required](/topics/login)
-- [How to use API](/topics/api)
-- [How to solve captcha](/topics/captcha)
-- [Popup page](/topics/popup)
-- [How to support multilanguages](/topics/mutilangs)
-- [Security](/topics/security)
-<!-- * [Contexts](/topics/contexts) -->
-- [Directory structure suggestions](/topics/direcory)
+
+  * [How to Use Subtasks](/topics/subtask)
+  * [When Login Is Required](/topics/login)
+  * [How to Use API](/topics/api)
+  * [How to Solve Captchas](/topics/captcha)
+  * [How to Scrape Pop-up Pages](/topics/popup)
+  * [How to Support Multilanguages](/topics/mutilangs)
+  * [Security](/topics/security)
+  * [Directory Structure Suggestions](/topics/direcory)

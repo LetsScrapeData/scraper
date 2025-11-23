@@ -9,7 +9,7 @@
 
 # CSS Selectors Auto-prompt
 
-### Introduction to CSS Selectors
+### Introduction to CSS selectors
 [CSS (Cascading Style Sheets)](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) is the code that styles web content. In LetsScrapeData, selectors are patterns used to match, or select, the elements from which you want to extract the data. There are many different types of selectors, such as:
 * [Attribute Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 * [Class Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)

@@ -1,5 +1,5 @@
 
-# Capability
+# When Login Is Required
 
 ### Concepts
 * <b>state data</b>: data required to access a website is generally generated after logging in, including cookies / localStroage / HTTP headers / user data
@@ -7,11 +7,13 @@
 * <b>CapConfig</b>: config of a type of capability, which defines supported login methods, login templates, required proxies and browsers, network access restrictions, etc.
 
 ### for user of @letsscrapedata/scraper
+* get the state data, such as executing the manual login template in VSCode or other methods
 * set the browser's state data to be injected
 * start tasks that depends on the injected state data
 
 ### for user of LetsScrapeData APP
 * add one or more capabilities
+* trigger manual login if it is a manual login
 * add a schedule of a template depending on capability
 
 ### for designer
@@ -30,6 +32,7 @@
 * browser: browserControllerTypes, browserTypes, browsrHeadlesses, browserIncognitos
 * concurrency
 * limit rating
+* others
 * how to add a CapConfig
   * Template 9002 is used to add a CapConfig.
   * If you need to configure advanced properties, such as meta data or proxy, please contact us.
@@ -54,11 +57,11 @@
 * example: [template 10052](/examples/tid10052)
 
 ### How to use state data
-* capName: state data is automatically injected into context
-* cookies: automatic use in browser; get_cookie in API
-* localStorage: automatic use in browser; get_storage in API
-* HTTP headers: mainly used for [APIs](/toppics/api)
-* user data: other session data that can be used to controll data scraping
+If login is required, you need to set the capName of the template. Before executing the template, the state data of the corresponding capability will be automatically injected into the browser and API context.
+* cookies: automatically takes effect in browser context; refer to action_setvar_get.get_cookie in API context
+* localStorage: automatically takes effect in browser context; refer to action_setvar_get.get_storage in API context
+* HTTP headers: used for [API](/toppics/api) request in API context
+* user data: other session data that can be used to controll data scraping, that can be accessed through the [variable userData](/reference/variable)
 * examples:
   * how to use state data in browser: [template 10053](/topics/tid10053)
   * how to use state data in API: [template 10054](/topics/tid10054)

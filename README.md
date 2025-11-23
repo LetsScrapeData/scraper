@@ -37,7 +37,7 @@
 
 5. Simple rate limits: automatic flow control, such as interval / max concurrency /times per period
 6. Simple proxy management: multiple "static" proxies to increase concurrency
-7. Subtasks: complex tasks can be split into multiple simple subtasks for better maintenance and increased concurrency
+7. Subtasks: complex task can be split into multiple simple subtasks for better maintenance and increased concurrency
 8. Data export
 
 ## Install
@@ -68,13 +68,13 @@ await scraper(newTasks);
 ```
 
 2. Templates
-- The simplest way is to use an existing template. You can search [Scrapers List](/scrapers/) or [Discord](https://discord.gg/46atZ8kPVb) to see if there is a template that meets your requirements.
-- You can also quickly [design templates](/design/) for scraping different websites.
+- The simplest way is to use an existing template. You can search [Scrapers](/scrapers/readme) or [Discord](https://discord.gg/46atZ8kPVb) to see if there is a template that meets your requirements.
+- You can also quickly [design templates](/start/readme) for scraping different websites.
 - Alternatively, you can ask someone else on [Discord](https://discord.gg/46atZ8kPVb) to help you design a template.
 
 3. Example with ScraperConfig
 
-```typescript
+```javascript
 // typescript
 import { scraper, TemplateTasks, ScraperConfig } from "@letsscrapedata/sraper";
 
@@ -112,7 +112,7 @@ Common configurations:
 
 Complete configurations:
 
-```typescript
+```javascript
 export interface ScraperConfig {
   /**
    * @default false

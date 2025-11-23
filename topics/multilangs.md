@@ -1,21 +1,5 @@
-<!--
- * @Description: 
- * @Author: Joe
- * @Date: 2023-09-27 17:01:58
- * @LastEditTime: 2023-10-27 16:25:34
- * @LastEditors: Joe
- * @Reference: 
--->
-<!--
- * @Description: 
- * @Author: Joe
- * @Date: 2023-09-27 17:01:58
- * @LastEditTime: 2023-10-24 21:22:19
- * @LastEditors: Joe
- * @Reference: 
--->
 
-# Template Lang
+# How to Support Multilanguages
 
 Refer to the video on [how to config template lang](https://youtu.be/zAx8xwqAMkE).
 

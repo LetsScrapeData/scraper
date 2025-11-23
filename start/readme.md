@@ -6,7 +6,7 @@
  * @LastEditors: Joe
  * @Reference: 
 -->
-# Quick Start - Template Design
+# Quick Start - Design
 
 The instructions in this section are only applicable when you design the template yourself. If you use an existing template to scrape data, refer to [how to scrape data](/readme).
 
@@ -62,7 +62,7 @@ A template consists of two components:
 * Test the template:
   * If the url has alread been openned, run command "Execute Part Actions(Ctrl + Alt + P)", which will skip all "operate" actions, such as goto/click/input/hover/select.
   * If the url has not been openned yet, run command "Execute All Actions(Ctrl + Alt + A)".
-* [Add/Save/Commit template](/start/saveTemplate)
+* [Add/Save/Commit template](/start/saveCommit)
   * Run command "Save/Add Template Config(Ctrl + Alt + S)" to add a new template(tid=0), then tid is updated.
   <!-- * Run command "Save/Add Template Config(Ctrl + Alt + S)" to save the template config. -->
   * Run command "Save Template Lang(Ctrl + Alt + L)" to generate and save the template lang.
@@ -108,6 +108,6 @@ The following template has tid 10001, you can add a schedule with this template.
 ```
 
 ### Next
-* [Set domainId](/start/setDomainId)
+* [Set domainId](/start/domain)
 * [Use regular data table](/start/datatable)
 * [CSS Selectors](/start/cssSelector)
