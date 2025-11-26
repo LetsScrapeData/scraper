@@ -16,7 +16,7 @@ A template consists of two components:
 
 ### Where to save
 The details of the template are saved in the following places:
-* Local text files: template config is saved in a XML file, template lang is save in many json files. These files are usually edited and saved in VSCode.
+* Local text files: template config is saved in a XML file, template lang is saved in many json files. These files are usually edited and saved in VSCode.
 * APP database: the content in the APP database is for your own use only.
 * Server database: the content in the server database can be used by other users, which should be correct.
 

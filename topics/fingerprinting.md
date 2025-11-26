@@ -15,4 +15,5 @@ Most common browsers now automatically update by default, so you can use them di
 
 ### API
 LetsScrapeData supports multiple API contexts. It is recommended to use the default API context first. It will automatically generate fingerprints that simulate real users and will update to use the most appropriate tools as needed.
+
 It also provides flexible control over the HTTP headers of [API](/topics/api) requests.

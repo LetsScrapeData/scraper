@@ -12,6 +12,7 @@ The cookies, localStorage, and HTTP headers in the state data may contain sensit
 
 ### File Directory
 The template can read local files (such as text files containing a large number of product IDs) and write content such as web page images to local files. For security reasons, these files must be located in a specific directory or its subdirectories.
+
 If you need to change this directory, please refer to the relevant configuration instructions.
 
 ### Security suggestions
