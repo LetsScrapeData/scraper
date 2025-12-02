@@ -1,5 +1,5 @@
 
-# How to Use API
+# How to Scrape Data Using API
 
 In LetsScrapeData, use the action ***action_api*** to send HTTP requests.
 
@@ -27,7 +27,7 @@ When the *format* attribute of ***action_api*** is "params", the request data wi
 
 ### Request headers
 ##### Common methods for generating request headers
-First, if the state data contains request headers, generally use those headers first. Example: [template xxx](/examples/tidxxx).
+First, if the state data contains request headers, generally use those headers first. Example: [template TBD](/examples/tidTBD).
 
 Second, if some request headers are dynamically generated via JavaScript and can be reused, generally use the request headers intercepted in the browser.
 
@@ -49,7 +49,7 @@ The *headerssource* attribute of ***action_api*** determines how the initial req
 
 For security reasons, state headers and intercepted headers cannot be accessed directly through variables.
 
-If needed, you can use `action_api.request_header` to replace or add additional request headers based on the above request headers.
+If needed, you can use ***action_api.request_header*** to replace or add additional request headers based on the above request headers.
 
 ##### Header content-length
 If the request header contains content-length, its value is automatically replaced with a value calculated based on the content of the request data.
@@ -86,9 +86,9 @@ Before attempting to use an API, we typically open devTools in a browser, visit 
 * First, intercept the API request using ***action_intercept_set.response_cache***.
 * Then, mimic that API request using ***action_api***:
   * When the *requestprefix* attribute is not "", if there is an intercepted API request, its related data is saved to a local file; otherwise, it attempts to read previously saved data from the local file (the file name is requestprefix_request.json). This allows you to view the detailed content of the intercepted API request, and the interception can be used for repeated debugging later.
-  * If the ***url*** attribute is "cachedRequestUrl", then ***url*** will be replaced with the url in the intercepted API request.
-  * If the ***data*** attribute is "cachedRequestData", then ***data*** will be replaced with the request data in the intercepted API request.
-  * If the ***headers*** attribute is "cachedRequestHeaders", then ***headers*** will be replaced with the headers in the intercepted API request.
+  * If the *url* attribute is "cachedRequestUrl", then *url* will be replaced with the url in the intercepted API request.
+  * If the *data* attribute is "cachedRequestData", then *data* will be replaced with the request data in the intercepted API request.
+  * If the *headers* attribute is "cachedRequestHeaders", then *headers* will be replaced with the headers in the intercepted API request.
 
 Example: [template TBD](/examples/tidTBD)
 
@@ -101,7 +101,7 @@ When the *responseprefix* attribute is not "", it first attempts to read the pre
 
 Example: [template TBD](/examples/tidTBD)
 
-### How to extract expected data later
+### How to extract the desired data later
 In most cases, ***action_extract_array*** is sufficient to extract the desired data. Example: [template TBD](/examples/tidTBD)
 
 For more complex data, ***action_extract*** can be used. Example: [template TBD](/examples/tidTBD)

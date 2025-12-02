@@ -1,12 +1,3 @@
-<!--
- * @Description: 
- * @Author: Joe
- * @Date: 2023-09-27 16:20:46
- * @LastEditTime: 2023-10-27 16:45:50
- * @LastEditors: Joe
- * @Reference: 
--->
-
 # How to Use Subtasks
 
 A complex task can be broken down into multiple simple subtasks, which can reduce complexity, increase reusability, and allow for flexible and efficient scheduling and execution.

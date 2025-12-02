@@ -4,7 +4,9 @@
 
 Some captchas can be bypassed by using a high-quality proxy or rate limiting. Some captchas cannot be bypassed, such as those used when logging in or visiting a website for the first time. Most common captchas can be automatically resolved using third-party services.
 
-LetsScrapeData can automatically solve common captchas, including Recaptcha(v2 & v3), Cloudflare Turnstile, GeeTest(v3 & v4), image/text, cooridinate, , with the help of third-party services (such as 2captcha). More types of CAPTCHAs can be supported as needed.
+LetsScrapeData can automatically solve common captchas, including Recaptcha(v2 & v3), Cloudflare Turnstile, GeeTest(v3 & v4), image/text, cooridinate, , with the help of third-party services (such as 2captcha). 
+
+More types of captchas can be supported as needed.
 
 ### How to sovle Recaptcha captchas
 The following action can automatically solve Recpatcha(v2 & v3) captchas:

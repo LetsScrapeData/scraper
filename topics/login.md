@@ -54,7 +54,7 @@
 * regularly check if you have logged in successfully
 * if the login is successful, get state data that interest you
 * if login fails, ignore the login attempt
-* example: [template 10052](/examples/tid10052)
+* example: [template 10052](/examples/tid10052_lsdManualLogin)
 
 ### How to use state data
 If login is required, you need to set the capName of the template. Before executing the template, the state data of the corresponding capability will be automatically injected into the browser and API context.
@@ -63,5 +63,5 @@ If login is required, you need to set the capName of the template. Before execut
 * HTTP headers: used for [API](/toppics/api) request in API context
 * user data: other session data that can be used to controll data scraping, that can be accessed through the [variable userData](/reference/variable)
 * examples:
-  * how to use state data in browser: [template 10053](/topics/tid10053)
-  * how to use state data in API: [template 10054](/topics/tid10054)
+  * how to use state data in browser: [template 10053](/topics/tid10053_lsdCapBrowser)
+  * how to use state data in API: [template 10054](/topics/tid10054_lsdCapApi)
