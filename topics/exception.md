@@ -17,7 +17,7 @@ For the default values ​​of the *errname* attribute for each action, see the
 ### How to validate data to meet expectations
 It is recommended to validate frequently changing websites and key data items to promptly identify exceptions and improve the template.
 
-Data validation can be performed by configuring the following properties:
+Data validation can be performed by configuring the following attributes:
 * *pattern*: Parameters for constructing the regular expression, new [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)(pattern, flags)
 
 * *flags*: Defaults to "", "i" indicates case-insensitive matching.

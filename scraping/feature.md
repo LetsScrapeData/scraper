@@ -17,6 +17,8 @@
   * Priority
   * Retry
 
+For more information, please refer to [How to Schedule Tasks](/topics/scheduling).
+
 ### Data Acquisition
 * Method
   * Browser Automation
@@ -60,11 +62,13 @@ For more information, please refer to [How to Monitor Web Scrping](/topics/monit
 * Data Processing: data re-extraction
 * Data Retrieval: API
 
+<!-- TBD: For more information, please refer to [How to Mangage Scraped Data](/topics/data). -->
+
 ### Summary
 * The Most Difficult: bypass bot detection
 * The Most Complex: scheduling and monitoring
 * The Most Tedious: data extraction
-* The Ultimate Goal: low cost and stability
+* The Ultimate Goal: low cost
 
 
 Only 'Encrypted Parameters' requires programming. The others can be implemented without programming.

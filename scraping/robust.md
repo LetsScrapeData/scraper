@@ -23,7 +23,7 @@ For more related content, please refer to [How to Build a Robust Web Scraping To
 * Refer to [How to Acquire Original Data](/scraping/acquisition)
 
 2. **Redundancy**
-* Use multiple CSS Selectors or XPaths to adapt to changes (AI-generated XPaths are not recommended as they are difficult to adapt to).
+* Use multiple CSS Selectors or XPaths to adapt to changes (AI-generated XPaths are not recommended as they are difficult to adapt to changes).
 <!-- * Refer to [CSS Selector / XPath Suggestions](/scraping/cssxpath). -->
 * LetsScrapeData supports multiple CSS Selectors or XPaths, and will try them one by one until the element is selected.
 

@@ -16,7 +16,7 @@ The following action can automatically solve Recpatcha(v2 & v3) captchas:
   <!-- <captcha_recaptcha minscore="0.5" /> -->
 </action_captcha>
 ```
-Example: [template 10011](/examples/tid10011_captchaToken.md)
+Example: [template 10011](/examples/tid10011_captchaToken.xml)
 
 ### How to sovle Cloudflare Turnstile captchas
 The following action can automatically solve Cloudflare captchas:

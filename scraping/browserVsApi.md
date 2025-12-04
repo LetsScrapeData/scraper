@@ -40,6 +40,6 @@ API requests involve direct communication with a server's Application Programmin
 Apart from the first two scenarios, the choice of which method to use generally doesn't make a significant difference in other scenarios.
 
 ### More related
-* [How to Acquire Original Data](/topics/acquisition)
+* [How to Acquire Original Data](/scraping/acquisition)
 * [How to Scrape Data by Browser Automation](/topics/browser)
 * [How to Scrape Data Using API](/topics/api)

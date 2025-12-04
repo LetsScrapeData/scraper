@@ -32,7 +32,7 @@
   * [How to Transform / Clean Data](/topics/transformation)
   * [Fingerprinting](/topics/fingerprinting)
   * [How to Design GUI for Parameters](/topics/para)
-  * [How to Scrape Data by Intercepting Requests](/topics/intercept)
+  <!-- * [How to Scrape Data by Intercepting Requests](/topics/interception) -->
   * [How to Scrape Pop-up Pages](/topics/popup)
   * [How to Scrape Data in Iframes](/topics/iframe)
   * [How to Recognize Text in Images](/topics/ocr)
