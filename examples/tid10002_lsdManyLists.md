@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10002" version="0.0.16" commited="true">
   <attrs>
@@ -19,3 +22,32 @@
     </action_loopfor>
   </actions>
 </template>
+```
+
+### Example of results
+```json
+{
+  "subtasks": [
+    {
+      "tid": 10001,
+      "parasstr": "1"
+    },
+    {
+      "tid": 10001,
+      "parasstr": "2"
+    },
+    {
+      "tid": 10001,
+      "parasstr": "3"
+    },
+    {
+      "tid": 10001,
+      "parasstr": "4"
+    },
+    {
+      "tid": 10001,
+      "parasstr": "5"
+    }
+  ]
+}
+```

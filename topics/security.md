@@ -8,7 +8,7 @@ Automatic login information (such as username and password) is encrypted and sto
 > **Warning**: Do not add any capabilites (credentials) involving money! Furthermore, related accounts may be banned! You should be fully aware of the potential risks when adding capabilites; LetsScrapeData assumes no responsibility for any possible consequences.
 
 ##### Sensitive state data
-The cookies, localStorage, and HTTP headers in the state data may contain sensitive information. This information can only be used to access web pages or APIs and should not be viewed by users. Sensitive information obtained from the template must be stored in a special variable called [secureData](/reference/variable) to prevent users from seeing it.
+The cookies, localStorage, and HTTP headers in the state data may contain sensitive information. This information can only be used to access web pages or APIs and should not be viewed by users. Sensitive information obtained from the template must be stored in a special variable called [secureData](/topics/variable) to prevent users from seeing it.
 
 ### File Directory
 The template can read local files (such as text files containing a large number of product IDs) and write content such as web page images to local files. For security reasons, these files must be located in a specific directory or its subdirectories.

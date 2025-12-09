@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10054" version="0.0.42" commited="true">
   <attrs>
@@ -20,3 +23,8 @@
     <action_extract_array tabname="dat_0000000000009921" list="" subkeys="data.records" keys="capabilityId,capName,nickName,statusCat" />
   </actions>
 </template>
+```
+
+### Example of results
+```json
+```

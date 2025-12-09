@@ -1,3 +1,7 @@
+# Manual Login Template
+
+### Template Config
+```xml
 <?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10052" version="0.0.12" commited="true">
   <attrs>
@@ -48,3 +52,8 @@
     <action_exit errname="other" />
   </actions>
 </template>
+```
+
+### Example of results
+```json
+```

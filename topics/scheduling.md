@@ -2,7 +2,7 @@
 # How to Schedule Tasks
 
 ### Design Goals
-##### Prerequisites
+##### Assumption
 LetsScrapeData is a template-driven, general-purpose web scraping tool, not designed for a specific scenario (e.g., scraping only Google Maps, or a scraper that only supports browser automation). The design considers various common scenarios.
 
 ##### Task Scheduling Goals
@@ -17,8 +17,8 @@ The main goal of task scheduling is to scrape the required data at the lowest co
 ### Factors Affecting Task Scheduling
 LetsScrapeData App has hundreds of parameters that affect task scheduling, mainly including the following categories:
 * Proxy
-* DomConfig
-* CapConfig
+* [Domain](/start/domain)
+* [CapConfig](/topics/login)
 * Template
 * Global configs
 * System resources

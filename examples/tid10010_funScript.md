@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10010" version="0.0.4" commited="true">
   <attrs>
@@ -23,27 +26,27 @@
       <column_templstr colname="concatStr">
         <templstr templ="${inParas.para1}" />
         <transform usevar="true">
-          <fun_myfun name="concat" arg1="${inParas.para2}" />
+          <fun_script name="concat" arg1="${inParas.para2}" />
         </transform>
       </column_templstr>
     </action_extract>
   </actions>
-  <myfuns>
-    <myfun name="concat" desc="concat two strings by '-'">
-      // inData: {origStr: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string}
-      // just for test
-      // const inData = {origString: "XXX", arg1: "YYY"};
-
-      function myFun(inData){
-        const { origStr, arg1, arg2 } = inData;
-        const result = `${origStr}-${arg1}`;
-        
-        return result;
-      }
-
-      // the last line must be a string or variable that holds a string or function that returns a string
-      // Do NOT use "return myFun(inData);" !!!
-      myFun(inData);
-    </myfun>
-  </myfuns>
+  <scripts>
+    <script name="concat" scenario="fun" version="v2">placeholder</script>
+  </scripts>
 </template>
+```
+
+### Example of results
+```json
+{
+  "dat_0000000000009911": [
+    {
+      "paraStr1": "XXX",
+      "paraStr2": "YYY",
+      "concatStr": "XXX-YYY"
+    }
+  ],
+  "subtasks": []
+}
+```

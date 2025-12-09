@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10008" version="0.0.6" commited="true">
   <attrs>
@@ -14,3 +17,21 @@
     </action_extract_array>
   </actions>
 </template>
+```
+
+### Example of results
+```json
+{
+  "dat_0000000000009921": [
+    {
+      "title": "Wake up to WonderWidgets!",
+      "type": "all"
+    },
+    {
+      "title": "Overview",
+      "type": "all"
+    }
+  ],
+  "subtasks": []
+}
+```

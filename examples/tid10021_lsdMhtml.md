@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10021" version="0.0.6" commited="true">
   <attrs>
@@ -20,3 +23,8 @@
     </action_setvar_get>
   </actions>
 </template>
+```
+
+### Example of results
+```json
+```

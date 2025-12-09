@@ -27,7 +27,7 @@ When the *format* attribute of ***action_api*** is "params", the request data wi
 
 ### Request headers
 ##### Common methods for generating request headers
-First, if the state data contains request headers, generally use those headers first. Example: [template TBD](/examples/tidTBD).
+First, if the state data contains request headers, generally use those headers first. Example: [template 10054](/examples/tid10054_lsdCapApi).
 
 Second, if some request headers are dynamically generated via JavaScript and can be reused, generally use the request headers intercepted in the browser.
 
@@ -90,7 +90,7 @@ Before attempting to use an API, we typically open devTools in a browser, visit 
   * If the *data* attribute is "cachedRequestData", then *data* will be replaced with the request data in the intercepted API request.
   * If the *headers* attribute is "cachedRequestHeaders", then *headers* will be replaced with the headers in the intercepted API request.
 
-Example: [template TBD](/examples/tidTBD)
+<!-- Example: [template TBD](/examples/tidTBD) -->
 
 ### How to cache API response data during debugging
 This section is only valid in debug mode.
@@ -99,11 +99,12 @@ When debugging API requests, it's necessary to view the specific content of the 
 
 When the *responseprefix* attribute is not "", it first attempts to read the previously cached response data from the local file (the file name is responseprefix_response.json). If successful, no API request needs to be sent; otherwise, an API request is sent. After the API request is successful, the response data is saved to the local file.
 
-Example: [template TBD](/examples/tidTBD)
+<!-- Example: [template TBD](/examples/tidTBD) -->
 
 ### How to extract the desired data later
-In most cases, ***action_extract_array*** is sufficient to extract the desired data. Example: [template TBD](/examples/tidTBD)
+In most cases, ***action_extract_array*** is sufficient to extract the desired data. Example: [template 10008](/examples/tid10008_extractArray)
 
-For more complex data, ***action_extract*** can be used. Example: [template TBD](/examples/tidTBD)
+For more complex data, ***action_extract*** can be used.
+<!-- Example: [template TBD](/examples/tidTBD) -->
 
-For extremely complex data, ***action_extract_script*** can be used to extract the desired data using a script. Example: [template TBD](/examples/tidTBD)
+For extremely complex data, ***action_extract_script*** can be used to extract the desired data using a script. Example: [template 10009](/examples/tid10009_exractScript)

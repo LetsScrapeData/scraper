@@ -52,32 +52,6 @@
 </template>
 ```
 
-### Results 
+### Example of results
 ```json
-{
-  "name": "LSD示例项",
-  "desc": "LSD示例项，包括名称、网址、价格和描述。",
-  "columns": [
-    {
-      "colname": "name",
-      "name": "名称",
-      "desc": "示例项的名称"
-    },
-    {
-      "colname": "linkUrl",
-      "name": "网址",
-      "desc": "示例项的网址"
-    },
-    {
-      "colname": "price",
-      "name": "价格",
-      "desc": "示例项的价格"
-    },
-    {
-      "colname": "description",
-      "name": "描述",
-      "desc": "示例项的价格"
-    }
-  ]
-}
 ```

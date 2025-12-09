@@ -1,5 +1,5 @@
   * [Main Features of Web Scraping Tool](/scraping/feature)
-  * [How to Build a Robust Web Scraping Tool](/scraping/robust)
   * [How to Acquire Orignal Data](/scraping/acquisition)
+  * [How to Build a Robust Web Scraping Tool](/scraping/robust)
   * [Browser Automation vs API Request](/scraping/browserVsApi)
   * [Web Page Rendering Methods](/scraping/rendering)

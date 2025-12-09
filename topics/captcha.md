@@ -16,7 +16,7 @@ The following action can automatically solve Recpatcha(v2 & v3) captchas:
   <!-- <captcha_recaptcha minscore="0.5" /> -->
 </action_captcha>
 ```
-Example: [template 10011](/examples/tid10011_captchaToken.xml)
+Example: [template 10011](/examples/tid10011_captchaToken)
 
 ### How to sovle Cloudflare Turnstile captchas
 The following action can automatically solve Cloudflare captchas:
@@ -25,7 +25,7 @@ The following action can automatically solve Cloudflare captchas:
   <captcha_turnstile />
 </action_captcha>
 ```
-Example: [template 10011](/examples/tid10011_captchaToken.md)
+Example: [template 10011](/examples/tid10011_captchaToken)
 
 ### How to sovle GeeTest captchas
 The following action can automatically solve GeeTest(v3 & v4) captchas:
@@ -34,7 +34,7 @@ The following action can automatically solve GeeTest(v3 & v4) captchas:
   <captcha_geetest/>
 </action_captcha>
 ```
-Example: [template 10011](/examples/tid10011_captchaToken.md)
+Example: [template 10011](/examples/tid10011_captchaToken)
 
 ### How to sovle image/text captchas
 The following action can automatically solve image/text captchas:
@@ -56,7 +56,7 @@ The following action can automatically solve image/text captchas:
   </captcha_text>
 </action_captcha>
 ```
-Example: [template 10012](/examples/tid10012_captchaText.md)
+Example: [template 10012](/examples/tid10012_captchaText)
 
 ### How to sovle coordinate captchas
 The following action can automatically solve coordinate captchas:
@@ -76,4 +76,4 @@ The following action can automatically solve coordinate captchas:
   </captcha_coordinate>
 </action_captcha>
 ```
-Example: [template 10013](/examples/tid10013_captchaCoordinate.md)
+Example: [template 10013](/examples/tid10013_captchaCoordinate)

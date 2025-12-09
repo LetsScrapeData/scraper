@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10024" version="0.0.8" commited="true">
   <attrs>
@@ -21,3 +24,8 @@
     <action_scroll_by maxtimes="0" interval="3000" />
   </actions>
 </template>
+```
+
+### Example of results
+```json
+```

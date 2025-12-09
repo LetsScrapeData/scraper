@@ -61,7 +61,7 @@ If login is required, you need to set the capName of the template. Before execut
 * cookies: automatically takes effect in browser context; refer to action_setvar_get.get_cookie in API context
 * localStorage: automatically takes effect in browser context; refer to action_setvar_get.get_storage in API context
 * HTTP headers: used for [API](/toppics/api) request in API context
-* user data: other session data that can be used to controll data scraping, that can be accessed through the [variable userData](/reference/variable)
+* user data: other session data that can be used to controll data scraping, that can be accessed through the [variable userData](/topics/variable)
 * examples:
   * how to use state data in browser: [template 10053](/topics/tid10053_lsdCapBrowser)
   * how to use state data in API: [template 10054](/topics/tid10054_lsdCapApi)

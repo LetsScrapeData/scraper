@@ -1,3 +1,6 @@
+
+### Template Config
+```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10012" version="0.0.8" commited="true">
   <attrs>
@@ -37,3 +40,4 @@
     </action_captcha>
   </actions>
 </template>
+```
