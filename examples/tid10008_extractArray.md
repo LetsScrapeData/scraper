@@ -1,5 +1,5 @@
 
-### Template Config
+### Template config
 ```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10008" version="0.0.6" commited="true">
@@ -12,11 +12,35 @@
   </attrs>
   <paras />
   <actions>
-    <action_api url="https://httpbin.org/json"></action_api>
-    <action_extract_array tabname="dat_0000000000009921" list="" subkeys="slideshow.slides" keys="title,type">
-    </action_extract_array>
+    <!-- the cached file "files/debug/tid10008_response.json" will contains the response of API request, only valid in debug mode -->
+    <action_api url="https://httpbin.org/json" responseprefix="tid10008" varname="apiResponse" />
+    <action_extract_array tabname="dat_0000000000009921" list="${apiResponse}" subkeys="slideshow.slides" keys="title,type" />
   </actions>
 </template>
+```
+File "files/debug/tid10008_response.json" contains the response of API request:
+```javascript
+{
+  "slideshow": {
+    "author": "Yours Truly", 
+    "date": "date of publication", 
+    "slides": [
+      {
+        "title": "Wake up to WonderWidgets!", 
+        "type": "all"
+      }, 
+      {
+        "items": [
+          "Why <em>WonderWidgets</em> are great", 
+          "Who <em>buys</em> WonderWidgets"
+        ], 
+        "title": "Overview", 
+        "type": "all"
+      }
+    ], 
+    "title": "Sample Slide Show"
+  }
+}
 ```
 
 ### Example of results

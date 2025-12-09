@@ -1,8 +1,8 @@
 
-### Template Config
+### Template config
 ```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
-<template tid="10010" version="0.0.4" commited="true">
+<templ tid="10010" version="0.0.4" commited="true">
   <attrs>
     <attr name="name" value="defaultName"></attr>
     <attr name="desc" value="defaultDescription"></attr>
@@ -34,7 +34,33 @@
   <scripts>
     <script name="concat" scenario="fun" version="v2">placeholder</script>
   </scripts>
-</template>
+</templ
+```
+scripts/concat.js:
+```javascript
+// version: v2
+// The default version is new Date().toISOString().
+// description: concat two strings by '-'
+
+// FunScriptInData: {origStr: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string}
+const inData = { origStr: "XXX", arg1: "YYY" };
+
+// start of script: The current line and lines above will be ignored.
+function concat(inData) {
+  const { origStr, arg1 } = inData;
+  const result = `${origStr}-${arg1}`;
+
+  // If this script is deemed invalid, please return "cfginvalid".
+
+  return result;
+}
+
+// the last line must be a string or variable that holds a string or function that returns a string
+// Do NOT use "return concat(inData);" !!!
+concat(inData);
+
+// end of script: The current line and the lines below will be ignored.
+console.log(concat(inData));
 ```
 
 ### Example of results

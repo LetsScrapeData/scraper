@@ -99,7 +99,7 @@ When debugging API requests, it's necessary to view the specific content of the 
 
 When the *responseprefix* attribute is not "", it first attempts to read the previously cached response data from the local file (the file name is responseprefix_response.json). If successful, no API request needs to be sent; otherwise, an API request is sent. After the API request is successful, the response data is saved to the local file.
 
-<!-- Example: [template TBD](/examples/tidTBD) -->
+Example: [template 10008](/examples/tid10008_extractArray)
 
 ### How to extract the desired data later
 In most cases, ***action_extract_array*** is sufficient to extract the desired data. Example: [template 10008](/examples/tid10008_extractArray)

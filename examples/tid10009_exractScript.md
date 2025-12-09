@@ -1,5 +1,5 @@
 
-### Template Config
+### Template config
 ```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10009" version="0.0.6" commited="true">
@@ -15,16 +15,18 @@
     <para paraname="para2" name="type" desc="type" />
   </paras>
   <actions>
-    <action_extract_script name="extract" tabname="dat_0000000000009931" />
+    <!-- The name here must be the same as scripts.script.name with the scenario "extract" -->
+    <action_extract_script name="extractData" tabname="dat_0000000000009931" />
   </actions>
   <scripts>
-    <script name="extract" scenario="extract" version="2025-12-01 14:46:22">placeholder</script>
+     <!-- The script file scripts/extractData.js must exist and contain the script content. -->
+    <script name="extractData" scenario="extract" version="v1.2.0">placeholder</script>
   </scripts>
 </template>
 ```
-scripts/extract.js:
+scripts/extractData.js:
 ```javascript
-// versions: v1
+// version: v1.2.0
 // The default version is new Date().toISOString().
 // description: extract data using script
 
@@ -71,4 +73,13 @@ console.log(extract(inData));
 
 ### Example of results
 ```json
+{
+  "dat_0000000000009931": [
+    {
+      "title": "TITLE",
+      "type": "TYPE"
+    }
+  ],
+  "subtasks": []
+}
 ```

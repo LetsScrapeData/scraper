@@ -63,5 +63,5 @@ If login is required, you need to set the capName of the template. Before execut
 * HTTP headers: used for [API](/toppics/api) request in API context
 * user data: other session data that can be used to controll data scraping, that can be accessed through the [variable userData](/topics/variable)
 * examples:
-  * how to use state data in browser: [template 10053](/topics/tid10053_lsdCapBrowser)
-  * how to use state data in API: [template 10054](/topics/tid10054_lsdCapApi)
+  * how to use state data in browser: [template 10053](/examples/tid10053_lsdCapBrowser)
+  * how to use state data in API: [template 10054](/examples/tid10054_lsdCapApi)

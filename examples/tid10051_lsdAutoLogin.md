@@ -1,6 +1,6 @@
 # Automatic Login Template
 
-### Template Config
+### Template config
 ```xml
 <?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10051" version="0.0.10" commited="true">

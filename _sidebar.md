@@ -1,6 +1,6 @@
 * [Overview](/)
 
-* [Scrapers](/scrapers/readme)
+<!-- * [Scrapers](/scrapers/readme) -->
   <!-- * [Google Map](/scrapers/googleMap) -->
 
 * [Web Scraping](/scraping/readme)

@@ -1,5 +1,5 @@
 <!-- 
-### How to Build a Robust Web Scraping Tool
+# How to Build a Robust Web Scraping Tool
 1. **Multiple Solutions**
   * For example, browser-based solutions are more stable, while API requests are more efficient; combining both is recommended, along with the latest undetectable tools.
 2. **Redundancy**
@@ -17,7 +17,7 @@
 For more related content, please refer to [How to Build a Robust Web Scraping Tool](https://letsscrapedata.github.io/scraper/#/scraping/robust)
  -->
 
-### How to Build a Robust Web Scraping Tool
+# How to Build a Robust Web Scraping Tool
 1. **Multiple Solutions**
 * For example, browser-based solutions are more stable, while API requests are more efficient; combining both is recommended, along with the latest undetectable tools.
 * Refer to [How to Acquire Original Data](/scraping/acquisition)

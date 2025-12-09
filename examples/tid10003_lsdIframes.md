@@ -1,5 +1,5 @@
 
-### Template Config
+### Template config
 ```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10003" version="0.0.10" commited="true">
