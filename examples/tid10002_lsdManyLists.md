@@ -25,7 +25,7 @@
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "subtasks": [
     {

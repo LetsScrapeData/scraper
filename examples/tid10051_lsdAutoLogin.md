@@ -53,5 +53,5 @@
 ```
 
 ### Example of results
-```json
+```javascript
 ```

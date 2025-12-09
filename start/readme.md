@@ -14,7 +14,7 @@ We design templates using vscode and related extensions.
 
 ### Build a template design environment
 * If you have not installed VSCode, please install [VSCode](https://code.visualstudio.com/). The following VSCode settings are recommended. Turn on word wrap and indent using 2 spaces.
-```json
+```javascript
 {
   "editor.wordWrap": "on",
   "editor.tabSize": 2,
@@ -23,7 +23,7 @@ We design templates using vscode and related extensions.
 ```
 * Install VSCode extensions:
   * XML, developed by Red Hat. The following VSCode setting are <b>highly </b>recommended, otherwise a maxOccurLimit error is likely to occur.
-  ```json
+  ```javascript
   {
     "xml.symbols.maxItemsComputed": 500000
   }

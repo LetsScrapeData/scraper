@@ -64,6 +64,8 @@ Using the LetsScrapeData extension, extracting content from a browser webpage is
 <attr name="defaultElementSource" value="xml" />
 ```
 
+Example: [template 10001](/examples/tid10001_lsdOneList)
+
 ##### How to extract data from iframes
 Refer to [How to Scrape Data in Iframes](/topics/iframe) for details.
 

@@ -5,7 +5,7 @@
 <template tid="10009" version="0.0.6" commited="true">
   <attrs>
     <attr name="name" value="Demo - extract data using script"></attr>
-    <attr name="desc" value="Demo - extract data using script, such as extracting data from response of API request"></attr>
+    <attr name="desc" value="Demo - extract data using script, such as extracting data from the API response"></attr>
     <attr name="domainId" value="1"></attr>
     <attr name="cfgShareLevel" value="120" />
     <attr name="parasstr" value="TITLE::TYPE" />
@@ -72,7 +72,7 @@ console.log(extract(inData));
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "dat_0000000000009931": [
     {

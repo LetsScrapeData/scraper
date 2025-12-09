@@ -8,6 +8,7 @@
     <attr name="desc"
       value="Demo - Get One List Example shows how to open a web page, use the automatic prompt of the ID/class/attribute selector, extract and save the desired data, save and commit the template. This example gets items of the nth(para1) list page." />
     <attr name="domainId" value="11101" />
+    <!-- <attr name="defaultElementSource" value="xml" /> -->
     <attr name="cfgShareLevel" value="120" />
     <attr name="parasstr" value="3" />
   </attrs>
@@ -39,7 +40,7 @@
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "dat_0000000200000004": [
     {

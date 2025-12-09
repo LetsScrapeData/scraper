@@ -5,20 +5,20 @@
 <template tid="10008" version="0.0.6" commited="true">
   <attrs>
     <attr name="name" value="Demo - extract data from an array"></attr>
-    <attr name="desc" value="Demo - extract data from an array, such as array in response of API request"></attr>
+    <attr name="desc" value="Demo - extract data from an array, such as array in the API response"></attr>
     <attr name="cfgShareLevel" value="120" />
     <attr name="domainId" value="1" />
     <attr name="domainNum" value="-1" />
   </attrs>
   <paras />
   <actions>
-    <!-- the cached file "files/debug/tid10008_response.json" will contains the response of API request, only valid in debug mode -->
+    <!-- the cached file "files/debug/tid10008_response.json" will contain the API response, only valid in debug mode -->
     <action_api url="https://httpbin.org/json" responseprefix="tid10008" varname="apiResponse" />
     <action_extract_array tabname="dat_0000000000009921" list="${apiResponse}" subkeys="slideshow.slides" keys="title,type" />
   </actions>
 </template>
 ```
-File "files/debug/tid10008_response.json" contains the response of API request:
+File "files/debug/tid10008_response.json" contains the API response:
 ```javascript
 {
   "slideshow": {
@@ -44,7 +44,7 @@ File "files/debug/tid10008_response.json" contains the response of API request:
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "dat_0000000000009921": [
     {

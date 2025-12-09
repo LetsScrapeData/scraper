@@ -39,7 +39,7 @@
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "dat_0000000200000004": [
     {

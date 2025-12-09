@@ -64,7 +64,7 @@ console.log(concat(inData));
 ```
 
 ### Example of results
-```json
+```javascript
 {
   "dat_0000000000009911": [
     {
