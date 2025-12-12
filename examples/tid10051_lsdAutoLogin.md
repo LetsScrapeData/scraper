@@ -2,7 +2,7 @@
 
 ### Template config
 ```xml
-<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10051" version="0.0.10" commited="true">
   <attrs>
     <attr name="name" value="Demo - automatic login of capName lsd" />

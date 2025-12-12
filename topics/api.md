@@ -83,9 +83,9 @@ If the *valerrname* attribute is not "ignore", the updated response data is vali
 This section is only valid in debug mode.
 
 Before attempting to use an API, we typically open devTools in a browser, visit the webpage, find the desired API request, and then mimic that API request. The following configuration makes this process easier.
-* First, intercept the API request using ***action_intercept_set.response_cache***.
+* First, intercept the API request using ***action_intercept_set.response_cache***, set the value of attribute *requestheaders* to true.
 * Then, mimic that API request using ***action_api***:
-  * When the *requestprefix* attribute is not "", if there is an intercepted API request, its related data is saved to a local file; otherwise, it attempts to read previously saved data from the local file (the file name is requestprefix_request.json). This allows you to view the detailed content of the intercepted API request, and the interception can be used for repeated debugging later.
+  * When the *requestprefix* attribute is not "", if there is an intercepted API request, its related data is saved to a local file; otherwise, it attempts to read previously saved data from the local file (the file name is files/debug/requestprefix_request.json). This allows you to view the detailed content of the intercepted API request, and the interception can be used for repeated debugging later.
   * If the *url* attribute is "cachedRequestUrl", then *url* will be replaced with the url in the intercepted API request.
   * If the *data* attribute is "cachedRequestData", then *data* will be replaced with the request data in the intercepted API request.
   * If the *headers* attribute is "cachedRequestHeaders", then *headers* will be replaced with the headers in the intercepted API request.
@@ -97,7 +97,7 @@ This section is only valid in debug mode.
 
 When debugging API requests, it's necessary to view the specific content of the response. After a successful API request, it's necessary to repeatedly debug how to extract the expected data, all of which require caching the response data.
 
-When the *responseprefix* attribute is not "", it first attempts to read the previously cached response data from the local file (the file name is responseprefix_response.json). If successful, no API request needs to be sent; otherwise, an API request is sent. After the API request is successful, the response data is saved to the local file.
+When the *responseprefix* attribute is not "", it first attempts to read the previously cached response data from the local file (the file name is files/debug/responseprefix_response.json). If successful, no API request needs to be sent; otherwise, an API request is sent. After the API request is successful, the response data is saved to the local file.
 
 Example: [template 10008](/examples/tid10008_extractArray)
 

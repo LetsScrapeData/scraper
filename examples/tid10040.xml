@@ -1,4 +1,4 @@
-<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="0" version="0.0.0" commited="false">
   <attrs>
     <attr name="name" value="defaultName"></attr>

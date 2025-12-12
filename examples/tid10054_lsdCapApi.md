@@ -1,7 +1,7 @@
 
 ### Template config
 ```xml
-<?xml-model href="../../lsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10054" version="0.0.42" commited="true">
   <attrs>
     <attr name="name" value="Demo - how to get data through state data after login (API)" />
