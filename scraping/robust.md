@@ -10,9 +10,9 @@
 * Hanlde different status codes of API response
 * Handle other specific exceptions
 4. **Monitoring**
-* Promptly detect and report anomalies.
+* Promptly detect and report exceptions.
 5. **Retry**
-* Automatically retry all anomalies after correction.
+* Automatically retry all exceptions after correction.
 
 For more related content, please refer to [How to Build a Robust Web Scraping Tool](https://letsscrapedata.github.io/scraper/#/scraping/robust)
  -->
@@ -35,9 +35,9 @@ For more related content, please refer to [How to Build a Robust Web Scraping To
 * Refer to [How to Handle Exceptions](/topics/exception) for details.
 
 4. **Monitoring**
-* Promptly detect and report anomalies.
+* Promptly detect and report exceptions.
 * Refer to [How to Monitor Web Scraping](/topics/monitoring)
 
 5. **Retry**
-* Automatically retry all anomalies after correction.
+* Automatically retry all exceptions after correction.
 * After the template is corrected, previously failed tasks will be automatically retried.

@@ -72,8 +72,8 @@ If the API request is successful,  the response data needs to be saved so that t
 ##### How to validate the response data
 If the *valerrname* attribute is not "ignore", the updated response data is validated based on the *pattern* and *flags* attributes to ensure it meets expectations; otherwise, it is considered an exception specified by *valerrname*.
 ##### How to save the response data
-* Cache response: If the *cache* attribute is true, similar to ***response_cache***, response data and other information will be temporarily cached in the data table.
-* Save to data table: push the object { pageUrl, requestMethod, requestUrl, requestData, responseData, size } ( and requestHeaders in debug mode) into the data table if tabname is not "".
+* Cache response: If the *cache* attribute is true, similar to ***response_cache***, response data and other information will be temporarily cached in the datatable.
+* Save to datatable: push the object { pageUrl, requestMethod, requestUrl, requestData, responseData, size } ( and requestHeaders in debug mode) into the datatable if tabname is not "".
 * Save to variables: 
   * First, get the value of response data, aka updated response data, if the *subkeys* attribute is not "".
   * Save the updated response data to variable if the *varname* attribute is not "".

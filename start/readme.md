@@ -35,13 +35,13 @@ We design templates using vscode and related extensions.
 * <b>para</b>: parameter defines what data is scraped or controls web scraping process
 * <b>action</b>: what to do for scraping data
 * <b>domainId</b>: a template must be associated with a domainId identified domain, which is a attribute of template
-* <b>tabname</b>: the name of the data table that stores the scraped data, and a template can have multiple data tables or not; the domainId associated with tabname must be the same as that of the template
+* <b>tabname</b>: the name of the datatable that stores the scraped data, and a template can have multiple datatables or not; the domainId associated with tabname must be the same as that of the template
 * <b>loc</b>: [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors) or [XPath](https://developer.mozilla.org/en-US/docs/Web/XPath), which is used to select the elements from which to extract the desired data; [CSS selector](/start/cssSelector) is recommended because LetsScrapeData extension supports automatic prompts for ID, class, and attribute selector
 
 ### Components of a template
 A template consists of two components:
 * Template Config: a XML file that defines attributes, parameters, actions and basic lang information of template.
-* Template Lang: many json files that define multilingual information for template, parameters, tabnames. It is optional because template config contains the basic lang information(name & description of template and parameters, nickname of data table's columns).
+* Template Lang: many json files that define multilingual information for template, parameters, tabnames. It is optional because template config contains the basic lang information(name & description of template and parameters, nickname of datatable's columns).
 
 
 ### Design a simple template
@@ -109,5 +109,5 @@ The following template has tid 10001, you can add a schedule with this template.
 
 ### Next
 * [Set domainId](/start/domain)
-* [Use regular data table](/start/datatable)
+* [Use regular datatable](/start/datatable)
 * [CSS Selectors](/start/cssSelector)

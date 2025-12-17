@@ -17,7 +17,7 @@
   * [Quick Start - Design](/start/readme)
   * [Add/Save/Commit Template](/start/savecommit)
   * [Set DomainId](/start/domain)
-  * [Use Regular Data Table](/start/datatable)
+  * [Use Regular Datatable](/start/datatable)
   * [CSS Selectors](/start/cssSelector)
 
 * [Design - Topics](/topics/readme)

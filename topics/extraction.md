@@ -82,6 +82,11 @@ Example: [template 10009](/examples/tid10009_exractScript)
 
 
 ### Related data processing
+##### Data decryption
+Data extracted from some web pages is unreadable, but the content displayed on the page is readable, such as content displayed using custom TTF or SVG fonts. In other words, the data to be extracted is encrypted.
+
+Refer to [How to Decrypt Encrypted Information](/topics/decrypt) for details.
+
 ##### Data validation
 It is recommended to validate frequently changing websites and key data items to promptly identify exceptions and improve the template.
 

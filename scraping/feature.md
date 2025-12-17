@@ -30,7 +30,6 @@ For more information, please refer to [How to Schedule Tasks](/topics/scheduling
   * Captcha: Recaptcha, Cloudflare Turnstile, GeeTest, etc
   * IP Access Restriction: such as residential proxy, rotating
   * Rate Limiting
-  * Data Encryption: such as TTF / SVG fonts, text in images (OCR)
   * Encrypted Parameters: reverse engineering needed
 
 For more information, please refer to [How to Acquire Orignal Data](/scraping/acquisition).
@@ -41,6 +40,7 @@ For more information, please refer to [How to Acquire Orignal Data](/scraping/ac
   * CSS Selector
   * XPath
 * from API Responses
+* Data Decryption: such as TTF / SVG fonts, text in images (OCR)
 * Data Cleaning
 
 For more information, please refer to [How to Extract Data](/topics/extraction).
