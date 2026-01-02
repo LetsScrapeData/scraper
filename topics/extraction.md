@@ -103,4 +103,12 @@ Sometimes it's necessary to transform or clean the extracted original content to
 Refer to [How to Transform / Clean Data](/topics/transformation) for details.
 
 ### Data re-extraction
-If the HTML page structure or JSON data structure changes, or if the user's expected data changes, the initially extracted data may be incorrect. To address this, the original HTML or JSON data can be saved during the crawling process. Then, after errors are detected, the data can be re-extracted using the new template during data export or synchronization. This process can be repeated multiple times as needed.
+If the HTML page structure or JSON data structure changes, or if the user's expected data changes, the initially extracted data may be incorrect. To address this, the original HTML or JSON data can be saved during the data acquisition. Then, after updating the template to meet the data requirements, the data is extracted again. This extraction process can be repeated multiple times as needed.
+
+##### Re-extracting data using an updated template
+First, update the original template to extract the desired data, including correcting errors, and then re-export or re-synchronize the data. This method requires the template to support both the regular execution mode and the data re-extraction mode, supporting only one data extraction result at any given time, but the operation is simpler.
+
+Example: [template TBD](/examples/tidTBD)
+
+##### Re-extracting data using a new template
+This method involves loading previously scraped original data and re-extracting it using a new template. This method is more flexible, supporting the extraction of different data results from the same original data, supplementing the data, and adding subtasks, etc., but the operation is slightly more complex.

@@ -51,12 +51,12 @@ For more information, please refer to [How to Extract Data](/topics/extraction).
 * Unexpected or Wrong Data
 * Expired Login
 * Blocked
-* etc
+* etc.
 
 For more information, please refer to [How to Monitor Web Scrping](/topics/monitoring).
 
 ### Data Management
-* Data Export: Excel, JSON, etc
+* Data Export: Excel, JSON, etc.
 * Data Synchronization: relational DB
 * Data Push: API
 * Data Processing: data re-extraction
