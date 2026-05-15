@@ -1,5 +1,5 @@
-
 ### Template config
+
 ```xml
 <?xml-model href="https://www.LetsScrapeData.com/xsd/lsd_en.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <template tid="10009" version="0.0.6" commited="true">
@@ -24,9 +24,11 @@
   </scripts>
 </template>
 ```
+
 scripts/extractData.js:
+
 ```javascript
-// version: v1.2.0
+// version: v1.3.0
 // The default version is new Date().toISOString().
 // description: extract data using script
 
@@ -68,10 +70,10 @@ extract(inData);
 
 // end of script: The current line and the lines below will be ignored.
 console.log(extract(inData));
-
 ```
 
 ### Example of results
+
 ```javascript
 {
   "dat_0000000000009931": [
