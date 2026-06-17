@@ -68,8 +68,9 @@ await scraper(newTasks);
 ```
 
 2. Templates
+
 - The simplest way is to use an existing template. You can search [Scrapers](/scrapers/readme) or [Discord](https://discord.gg/46atZ8kPVb) to see if there is a template that meets your requirements.
-- You can also quickly [design templates](/start/readme) for scraping different websites.
+- You can also quickly [design templates](/start/quickstart) for scraping different websites.
 - Alternatively, you can ask someone else on [Discord](https://discord.gg/46atZ8kPVb) to help you design a template.
 
 3. Example with ScraperConfig

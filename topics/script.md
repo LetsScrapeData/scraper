@@ -1,81 +1,81 @@
 # How to Use Scripts
 
-虽然LetsScrapeData模板支持上百个预定义函数和字符串模板进行大多数数据处理和计算，在计算复杂时，仅使用这些函数可能是模板过于复杂，此时可使用脚本。目前仅支持JavaSCript脚本。
+While LetsScrapeData templates support hundreds of predefined functions and string templates for most data processing and calculation tasks, relying solely on these can make templates overly complex when calculations are intricate; in such cases, scripts may be used. Currently, only JavaScript is supported.
 
-> 提醒：
+> Note:
 >
-> - 虽然支持脚本，出于性能、后期维护等原因(比如出于安全原因，可能对脚本进行更严格的限制)，建议优先使用预定义函数，除非必要时才使用自定义脚本。
-> - **js-isolated**类型脚本相对安全；**js-vm2**类型脚本进行了限制，但仍存在安全隐患；我们随时可能根据需要进行更严格的限制。
-> - 建议尽可能使用**js-isolated**类型脚本，以后extract和fun场景可能仅支持该类型脚本。
-> - 如果存在潜在安全隐患，将来可能需要先通过评审、对用户提示安全风险、或仅对信用级别高的设计者开放等。
-> - 如果发现任何潜在恶意脚本，永久禁止使用。
+> - Although scripting is supported, we recommend prioritizing predefined functions for reasons such as performance and maintainability (e.g., stricter security restrictions may be applied to scripts); use custom scripts only when necessary.
+> - **js-isolated** scripts are relatively secure; **js-vm2** scripts are subject to limitations but still pose potential security risks. We reserve the right to impose stricter restrictions at any time as needed.
+> - We recommend using **js-isolated** scripts whenever possible; future support for "extract" and "fun" scenarios may be limited exclusively to this type.
+> - Scripts posing potential security risks may be subject to future measures such as mandatory review, security warnings to users, or restricted access (e.g., available only to designers with high trust ratings).
+> - Any script found to be potentially malicious will be permanently banned.
 
-### 安全考虑
+### Security Considerations
 
-出于安全原因：
+For security reasons:
 
-- 所有脚步的输入数据先序列化为字符串后传入，再根据具体场景，转换为对应对象。
-- 所有脚本的输出数据只能为字符串传出，再根据具体场景，转换为对应对象。
-- 针对不同类型脚本，限制了可使用的资源、外部程序包、函数。
+- All input data for scripts is serialized into strings before being passed in, and subsequently converted into the appropriate objects based on the specific scenario.
+- All output data from scripts is passed out solely as strings, and subsequently converted into the appropriate objects based on the specific scenario.
+- Restrictions are imposed on the resources, external packages, and functions available for use, depending on the script type.
 
-### 脚本类型
+### Script Types
 
-脚本类型决定脚本可以使用的功能，LetsScrapeData支持如下类型的自定义JavaScript脚本：
+The script type determines the functionality available to the script. LetsScrapeData supports the following types of custom JavaScript scripts:
 
-- **js-isolated**脚本：脚本仅能使用原生JavaScript支持的功能(不能使用crypto、Buffer等)，只能读取外部传入的数据。
-- **js-vm2**脚本：脚本可使用原生JavaScript支持的功能和如下指定的程序包和函数，只能读取外部传入的数据。
+- **js-isolated** scripts: These scripts can only use features supported by native JavaScript (e.g., crypto and Buffer are unavailable) and can only read data passed in from an external source.
+- **js-vm2** scripts: These scripts can use features supported by native JavaScript as well as the specific packages and functions listed below; they can only read data passed in from an external source.
   - crypto
   - Buffer
   - URL
   - URLSearchParams
-  - 根据需要，其它可安全使用的函数
+  - Other functions deemed safe for use as needed
   <!-- - cheerio -->
 
-### 脚本使用场景
+### Script Use Scenarios
 
-脚本使用场景决定脚本的用途、输入和输出数据，LetsScrapeData模板支持在以下场景执行自定义JavaScript脚本：
+The usage scenario determines the script's purpose and its input/output data. LetsScrapeData templates support the execution of custom JavaScript scripts in the following scenarios:
 
-- **api**：用于计算API请求中复杂的请求头和请求数据，比如加密的签名参数；通过**action_api**的*scriptname*属性指定脚本。
-- **extract**"：用于从采集的原始数据中提取需要的数据；通过**action_extract_script**的*scriptname*属性指定脚本。
-- **fun**"：用于从采集的原始数据中提取需要的数据；通过**action_extract_script**的*scriptname*属性指定脚本。
+- **api**: Used to calculate complex request headers and request data (such as encrypted signature parameters) for API requests; the script is specified via the _scriptname_ attribute of **action_api**.
+- **extract**: Used to extract required data from original data; the script is specified via the _scriptname_ attribute of **action_extract_script**.
+- **fun**: Used to extract required data from original data; the script is specified via the _scriptname_ attribute of **action_extract_script**.
 
-以上场景的脚步均可通过全局变量inData访问输入数据，具体定义参见后面说明。
+In all the above scenarios, scripts can access input data via the global variable _inData_ (please refer to the subsequent section for specific definitions).
 
-除了以上场景，在**action_setvar_get.get_evulate**中也可使用JavasScript脚本，出于安全原因，不能用于访问cookies和localStorage；以后为了安全，可能更严格限制其使用，因此建议尽量避免使用**get_evaluate**。
+In addition to the scenarios above, JavaScript scripts can also be used within **action_setvar_get.get_evaluate**. However, for security reasons, they cannot access cookies or localStorage. Usage restrictions may become stricter in the future for security purposes; therefore, it is recommended to avoid using **get_evaluate** whenever possible.
 
-### 脚本配置
+### Script Configuration
 
-1. 针对不同的脚本使用场景，使用*scriptname*属性设置引用的脚本名称。
-2. 根据需要，使用**scripts.script**对每个脚本进行配置：
+1. Use the _scriptname_ attribute to specify the name of the referenced script based on the usage scenario.
+2. Configure each script using **scripts.script** as needed:
 
-- _name_：脚本名称，必须与上面的scriptname同名。
-  - 脚本内容保存在单独的脚本文件中，该文件必须位于模板所在目录的scripts目录下，文件名为scriptname，文件扩展名为"js"；在保存和调试模板时，会自动读取该脚本文件内容。
-- _scenario_：脚本使用场景，有效值为"api"、"extract"、"fun"，不同场景的输入和输出数据不同，参见后面说明。
-- _solution_: 脚本类型，有效值为"js-isolated"、"js-vm2"。
-- _externals_："cookies"、"localStorage"、"pageEvaluate"等，多个以逗号分割；仅当"scenario"为"api"、且*solution*为"js-vm2"时有效。
-  - cookies和localStorage为状态数据中的内容，参见[如果需要登录](/topics/login)
+- _name_: The script name; must match the _scriptname_ defined above.
+- The script content is stored in a separate file located in the "scripts" subdirectory of the template's directory. The filename must be _scriptname_ with a ".js" extension. The content is automatically read when saving or debugging the template.
+- _scenario_: The usage scenario. Valid values ​​are "api", "extract", and "fun". Input and output data differ by scenario; see the detailed explanations below.
+- _solution_: The script type. Valid values ​​are "js-isolated" and "js-vm2".
+- _externals_: External dependencies such as "cookies", "localStorage", or "pageEvaluate" (separated by commas). Valid only when _scenario_ is "api" and _solution_ is "js-vm2".
+- "cookies" and "localStorage" refer to data within the state object; see [When Login Is Required](/topics/login).
 
-### 脚本文件总体说明
+### General Script File Specifications
 
-所有类型脚本均遵从以下说明：
+All script types must adhere to the following specifications:
 
-- 第一部分：脚本说明和模拟输入，可选，可包含如下内容：
-  - 版本说明: 如需要，必须放第一行，比如 "// version: 1.0.0"
-  - 脚本其它说明：需要为注释格式
-  - 模拟输入：比如inData，单独调试脚本时使用；非调试时，会自动传入相关内容，详见后面不同场景的详细说明。
-  - 第一部分结束分割行：如果有这部分内容，必须包含此行内容，必须以"// start of script:"开头，表示下一行开始为脚本真实内容
-- 第二部分：脚本真实内容，可包含注释内容；模板仅保存这部分内容。
-  - **js-isolated**类型脚本的最后一行脚本必须是字符串、存有字符串的变量，或者是返回字符串的函数，不要使用return；具体请参考[isolated-vm](https://www.npmjs.com/package/isolated-vm)。
-  - **js-vm2**类型脚本需要将一个函数赋值给module.exports，该函数无输入参数，返回字符串；具体请参考[vm2](https://www.npmjs.com/package/vm2)。
-- 第三部分：调试打印部分，可选
-  - 第三部分开始分割行：如果有这部分内容，必须包含此行内容，必须以"// end of script:"开头，表示从行开始为第三部分内容。
-  - 其它内容：一般打印执行脚本的输出结果，用于调试。
+- Part 1: Script description and mock input (optional). May include:
+  - Version info: If required, must be on the first line (e.g., "// version: 1.0.0").
+  - Other descriptions: Must be formatted as comments.
+  - Mock input: e.g., _inData_, used for standalone script debugging. During normal execution (non-debugging), relevant content is passed in automatically; see the detailed scenario explanations below.
+  - Part 1 separator line: If this section exists, it must include a line starting with "// start of script:", indicating that the actual script content begins on the next line.
+- Part 2: Actual script content (may include comments). Only this part is saved by the template.
+  - For **js-isolated** scripts, the final line must be a string, a variable holding a string, or a function returning a string; do not use the "return" keyword. Please refer to [isolated-vm](https://www.npmjs.com/package/isolated-vm) for details.
+  - **js-vm2** type scripts require assigning a function to "module.exports"; this function takes no input parameters and returns a string. Please refer to [vm2](https://www.npmjs.com/package/vm2) for details.
+- Part 3: Debugging/Logging section (optional)
+  - Section separator line: If this section is included, this specific line is mandatory; it must begin with "// end of script:" to indicate that the content following this line belongs to Part 3.
+  - Other content: Typically used to print the script's execution output for debugging purposes.
 
-### api场景脚本的输入和输出数据
+### Input and Output Data for api Scenario Scripts
 
-##### 脚本输入数据
+##### Script Input Data
 
-脚本可访问全局变量inData: ApiScriptInData:
+The script can access the global variable _inData_ (type: _ApiScriptInData_):
 
 ```javascript
 type DataRecord = Record<string, string>;
@@ -99,10 +99,10 @@ interface LocalStorageItem {
 interface ApiScriptInData {
   method: "DELETE" | "GET" | "POST" | "PUT";
   url: string;
-  headers?: DataRecord; // original headers
-  data?: any; // original request data
-  cookies?: CookieItem[]; // valid if script.externals includes "cookies"
-  localStorage?: LocalStorageItem[]; // valid if script.externals includes "localStorage"
+  headers?: DataRecord; // valid if original headers is not undefined
+  data?: any; // valid if original request data is not undefined
+  cookies?: CookieItem[]; // valid if script.external includes "cookies"
+  localStorage?: LocalStorageItem[]; // valid if script.external includes "localStorage"
   vars: {
     inParas: DataRecord;
     userData: DataRecord;
@@ -113,9 +113,9 @@ interface ApiScriptInData {
 
 ```
 
-##### 脚本输出数据
+##### Script Output Data
 
-脚本需要输出文本JSON.stringify(outData: ApiScriptOutData):
+The script must output a string containing the result of _JSON.stringify(outData)_ (type: _ApiScriptOutData_):
 
 ```javascript
 interface ApiScriptOutData {
@@ -131,14 +131,23 @@ interface ApiScriptOutData {
    * replace original request data if data is not undefined
    */
   data?: any;
+  /**
+   * optional error, such as "cfginvalid"(template/script is invalid) or "other"(task failed)
+   ** invalid errName is ignored
+   */
   errName?: string;
+  /**
+   * When cookies or localStorage are accessed, the message is ignored
+   */
   message?: string;
 }
 ```
 
-### extract场景脚本的输入和输出数据
+### Input and Output Data for extract Scenario Scripts
 
-##### 脚本输入数据
+##### Script Input Data
+
+The script can access the global variable _inData_ (type: _ExtractScriptInData_):
 
 ```javascript
 type Tabname = string; // "dat_\d{16}", such as "dat_0000000000007001"
@@ -157,19 +166,35 @@ interface ExtractScriptInData {
 }
 ```
 
-##### 脚本输出数据
+##### Script Output Data
+
+The script must output a string containing the result of _JSON.stringify(outData)_ (type: _ExtractScriptOutData_):
 
 ```javascript
 interface ExtractScriptOutData {
-  execData: Record<Tabname, DataRecord[]>; // new execData that replace or append the original execData
+  /**
+   * For each datatable(tabname) in execData, new records will replace or append to (action_extract_script.opType) the original records
+   */
+  execData: ExecData;
+  /**
+   * vars[varname] is set to a variable if varname starts with "extract" and does not include "." and value of vars[varname] is a string:
+   ** extractSubtasks is typically used to return new subtasks, refer to action_subtask.subtasks
+   ** extractError is typically used to return error messages
+   */
+  vars?: Record<string, string>;
+  /**
+   * optional error, such as "cfginvalid"(template/script is invalid) or "other"(task failed)
+   ** invalid errName is ignored
+   */
   errName?: string;
-  vars?: Record<string, string>; // key must be start with "extract", or ignored
 }
 ```
 
-### fun场景脚本的输入和输出数据
+### Input and Output Data for fun Scenario Scripts
 
-##### 脚本输入数据
+##### Script Input Data
+
+The script can access the global variable _inData_ (type: _FunScriptInData_):
 
 ```javascript
 interface FunScriptInData {
@@ -182,4 +207,6 @@ interface FunScriptInData {
 };
 ```
 
-##### 脚本输出数据
+##### Script Output Data
+
+The script must output a string.

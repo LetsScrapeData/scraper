@@ -1,5 +1,12 @@
 # Main Features of Web Scraping Tool
 
+### Development and Debugging
+
+- Program development or template design
+- Debugging
+
+<!-- For more information, please refer to [How to Debug Template](/topics/debugging). -->
+
 ### Scheduling
 
 - Expected Scraping Time

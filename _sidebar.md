@@ -14,7 +14,7 @@
     <!-- * [Reverse Engineering](/scraping/reverse) -->
 
 - [Design - Start](/start/readme)
-  - [Quick Start - Design](/start/readme)
+  - [Quick Start - Design](/start/quickstart)
   - [Add/Save/Commit Template](/start/saveCommit)
   - [Set DomainId](/start/domain)
   - [Use Regular Datatable](/start/datatable)
@@ -46,7 +46,7 @@
   - [Security](/topics/security)
   <!-- * [Directory Structure Suggestions](/topics/directory) -->
 
-- [Design - Examples](/examples/readme)
+<!-- - [Design - Examples](/examples/readme) -->
 
 - [Design - Reference](/reference/readme)
   <!-- * [Actions](/reference/action) -->
