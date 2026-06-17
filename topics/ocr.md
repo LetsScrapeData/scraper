@@ -1,6 +1,6 @@
-
 # How to Recognize Text in Images
-LSD utilizes third-party OCR services to recognize text in images (including screenshots). See ***ocrcfg_api***.
+
+LSD utilizes third-party OCR services to recognize text in images (including screenshots). See **ocrcfg_api**.
 
 The OCR API is charged per use. To reduce costs, LetsScrapeData supports merging multiple images together for recognition.
 

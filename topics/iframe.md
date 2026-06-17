@@ -1,6 +1,7 @@
-
 # How to Scrape Data in Iframes
-To access or extract data from iframes, simply use the ***iframe*** within the ***element***. For example:
+
+To access or extract data from iframes, simply use the **iframe** within the **element**. For example:
+
 ```xml
 <element loc="#container > div.lsd-item">
   <iframe loc="#childframe01" />

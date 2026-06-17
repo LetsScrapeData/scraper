@@ -1,11 +1,13 @@
-
 # How to Access the Data in the Datatable
 
 ### action_loopinstr
-* *list*: list matchs /^dat_[0-9]{16}$/
+
+- _list_: list matchs /^dat\_[0-9]{16}$/
 
 ### action_extract_array
-* *list*: list matchs /^dat_[0-9]{16}$/
+
+- _list_: list matchs /^dat\_[0-9]{16}$/
 
 ### action_extract_script
-* inData.execData
+
+- inData.execData
